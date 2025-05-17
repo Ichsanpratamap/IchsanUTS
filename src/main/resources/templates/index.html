@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do List</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="container">
+    <h1>Halo, <span th:text="${name}">User</span>!</h1>
+    <h2>Tambah Kegiatan</h2>
+    <form th:action="@{/todos/create}" method="post">
+        <input type="text" name="task" placeholder="Apa yang ingin kamu lakukan?" required>
+        <input type="date" name="deadline" required>
+        <button type="submit">Tambah</button>
+    </form>
+
+    <h2>Belum Selesai</h2>
+    <div th:each="todo : ${todos}" class="todo-item">
+        <span th:text="${todo.task} + ' (Deadline: ' + ${todo.date} + ')'"></span>
+        <div class="actions">
+            <form th:action="@{/done/{id}(id=${todo.id})}" method="post" style="display:inline;">
+                <button>Selesai</button>
+            </form>
+            <form th:action="@{/todos/delete/{id}(id=${todo.id})}" method="post" style="display:inline;">
+                <button>Hapus</button>
+            </form>
+        </div>
+    </div>
+
+    <h2>Selesai</h2>
+    <div th:each="todo : ${finishedTodos}" class="todo-item done">
+        <span th:text="${todo.task} + ' (Deadline: ' + ${todo.date} + ')'"></span>
+        <form th:action="@{/undo}" method="post" style="display:inline;">
+            <input type="hidden" name="id" th:value="${todo.id}" />
+            <input type="hidden" name="deadline" th:value="${todo.date}" />
+            <button>Undo</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
