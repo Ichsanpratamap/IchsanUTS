@@ -54,7 +54,7 @@ Spring menggunakan banyak konsep abstraksi, seperti `JpaRepository` yang digunak
 
 ##  Demo Proyek
 
-- **GitHub**: [](#)
+- **GitHub**: [https://github.com/Ichsanpratamap/UTS_PBO2_Kelas_23552011205](#)
 - **Link Google Drive**: [https://drive.google.com/file/d/1MvfLPYhEg-4HZVoYTBKLvJCA4DIKm7bv/view?usp=sharing](#)
 
 ---
