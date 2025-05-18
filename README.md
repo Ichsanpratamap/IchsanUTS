@@ -5,7 +5,7 @@
 
 ---
 
-##  Profil
+## 📌 Profil
 
 - **Nama**: Ichsan Pratama Putra  
 - **NIM**: 23552011205  
@@ -13,35 +13,49 @@
 
 ---
 
-##  Judul Studi Kasus
+## 📝 Judul Studi Kasus
 
-**Manajemen Deadline Tugas Mahasiswa Berbasis OOP**
-
----
-
-##  Penjelasan Studi Kasus
-
-Studi kasus ini membahas tentang bagaimana mahasiswa dapat mengelola deadline tugas mereka dengan sistem berbasis OOP. Sistem ini memungkinkan mahasiswa menambahkan, menghapus, dan melihat daftar tugas beserta deadline-nya, serta mendapatkan notifikasi saat deadline mendekat.
+**Aplikasi Manajemen Deadline Tugas Menggunakan Java Spring Boot**
 
 ---
 
-##  Penjelasan 4 Pilar OOP dalam Studi Kasus
+## 📖 Penjelasan Studi Kasus
 
-### 1.  Inheritance
-Dalam studi kasus ini, kelas `Tugas` diwarisi oleh kelas `TugasPrioritas`, yang menambahkan atribut tambahan seperti `prioritas`. Ini menunjukkan penggunaan pewarisan untuk memperluas fungsionalitas kelas dasar.
+Aplikasi ini membantu pengguna (mahasiswa) untuk mencatat, memantau, dan mengatur deadline tugas mereka. Fitur yang disediakan meliputi:
 
-### 2.  Encapsulation
-Setiap objek `Tugas` memiliki atribut seperti `judul`, `deadline`, dan `status`, yang hanya dapat diakses melalui getter dan setter untuk menjaga integritas data.
+- Registrasi dan login pengguna
+- Menambahkan, mengedit, dan menghapus tugas
+- Menampilkan daftar tugas yang harus diselesaikan
+- Pengelompokan tugas berdasarkan pengguna
 
-### 3.  Polymorphism
-Metode `tampilkanInfo()` diturunkan ke kelas `TugasPrioritas` dengan implementasi berbeda untuk menampilkan tambahan info prioritas. Ini adalah bentuk dari *method overriding*.
-
-### 4.  Abstraction
-Kelas abstrak `TugasBase` digunakan sebagai blueprint untuk kelas-kelas tugas lainnya, mendefinisikan metode abstrak seperti `tampilkanInfo()` yang harus diimplementasikan oleh subclass.
+Teknologi yang digunakan:
+- Java Spring Boot
+- Spring Security
+- Thymeleaf (template engine)
+- HTML/CSS
 
 ---
 
-##  Demo Proyek
+## 🔍 Penjelasan 4 Pilar OOP dalam Studi Kasus
 
-- **GitHub**: [](#)
-- **Google Drive**: [https://drive.google.com/drive/folders/1N0v0Dsv8ZgODxYxt8t4swcTtUCe5Hpfv?usp=sharing](#)
+### 1. 🧬 Inheritance
+`UserDetailsService` diimplementasikan oleh `UserServices` untuk mengatur autentikasi dan otorisasi pengguna, menunjukkan penggunaan pewarisan antarmuka dari Spring Security.
+
+### 2. 🔒 Encapsulation
+Class seperti `User` dan `Todo` menyimpan data dengan akses `private`, dan memanipulasi datanya menggunakan *getter* dan *setter*, menjaga keamanan data.
+
+### 3. 🔁 Polymorphism
+Metode `loadUserByUsername` diimplementasikan ulang di `UserServices` sebagai bentuk *method overriding* dari antarmuka `UserDetailsService`.
+
+### 4. 🧩 Abstraction
+Spring menggunakan banyak konsep abstraksi, seperti `JpaRepository` yang digunakan oleh `UserRepository` dan `TodoRepository`. Kita cukup mendeklarasikan interface-nya, dan Spring akan mengimplementasikan detailnya secara otomatis.
+
+---
+
+## 🎥 Demo Proyek
+
+- **GitHub**: [Link Repository](#)
+- **YouTube**: [Link Demo](#)
+
+---
+
